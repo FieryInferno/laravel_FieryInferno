@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link {{ $active == 'rumahSakit' ? 'active' : ''}}" href="rumah_sakit">Rumah Sakit</a>
+                  <a class="nav-link {{ $active == 'rumahSakit' ? 'active' : ''}}" href="/rumah_sakit">Rumah Sakit</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pasien">Pasien</a>
+                  <a class="nav-link {{ $active == 'pasien' ? 'active' : ''}}" href="/pasien">Pasien</a>
                 </li>
               </ul>
             </div>

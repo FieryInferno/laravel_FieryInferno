@@ -2,7 +2,7 @@
 @section('content')
   <div class="card">
     <div class="card-header">
-      <a type="button" class="btn btn-primary" href="/rumah_sakit/tambah">Tambah</a>
+      <a type="button" class="btn btn-primary" href="/pasien/tambah">Tambah</a>
     </div>
     <div class="card-body">
       @if (session('status'))
@@ -19,23 +19,23 @@
             <th scope="col">#</th>
             <th scope="col">Nama</th>
             <th scope="col">Alamat</th>
-            <th scope="col">Email</th>
             <th scope="col">Telepon</th>
+            <th scope="col">Rumah Sakit</th>
             <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody id="container">
           <?php $no = 1; ?>
-          @foreach ($rumahSakit as $rs)
+          @foreach ($pasien as $rs)
             <tr>
               <th scope="row">{{ $no++ }}</th>
               <td>{{ $rs->nama }}</td>
               <td>{{ $rs->alamat }}</td>
-              <td>{{ $rs->email }}</td>
               <td>{{ $rs->telepon }}</td>
+              <td>{{ $rs->rumahSakit->nama }}</td>
               <td>
-                <a class="btn btn-primary" href="/rumah_sakit/edit/{{ $rs->id }}">Edit</a>
-                <button class="btn btn-danger" onclick="deleteData('rumah_sakit', '{{ $rs->id }}')">Hapus</button>
+                <a class="btn btn-primary" href="/pasien/edit/{{ $rs->id }}">Edit</a>
+                <button class="btn btn-danger" onclick="deleteData('pasien', '{{ $rs->id }}')">Hapus</button>
               </td>
             </tr>
           @endforeach
