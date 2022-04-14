@@ -26,6 +26,9 @@
                 <li class="nav-item">
                   <a class="nav-link {{ $active == 'pasien' ? 'active' : ''}}" href="/pasien">Pasien</a>
                 </li>
+                <li class="nav-item">
+                  <a class="btn btn-danger" href="/logout">Logout</a>
+                </li>
               </ul>
             </div>
           </div>
